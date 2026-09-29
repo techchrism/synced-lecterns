@@ -1,0 +1,11 @@
+{
+  "pins": {
+    "nixpkgs": {
+      "type": "Channel",
+      "name": "nixos-26.05",
+      "url": "https://releases.nixos.org/nixos/26.05/nixos-26.05.10769.cf5e76507c6e/nixexprs.tar.xz",
+      "hash": "sha256-hzJtu90JIQXnmgxKeP23CAx86G4L+dcQ+GHB1JK04qA="
+    }
+  },
+  "version": 7
+}
