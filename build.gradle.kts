@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "2.0.21"
+    kotlin("jvm") version "2.4.10"
 }
 
 group = "me.techchrism"
@@ -20,7 +20,7 @@ dependencies {
 }
 
 kotlin {
-    jvmToolchain(21)
+    jvmToolchain(25)
 }
 
 tasks.processResources {
@@ -32,19 +32,4 @@ tasks.processResources {
 tasks.jar {
     exclude("META-INF/**", "META-INF")
     archiveFileName.set("${project.name}.jar")
-}
-
-tasks.register("copyJarToPlugins") {
-    doLast {
-        copy {
-            from("build/libs/${project.name}.jar")
-            into(System.getenv("TESTING_PLUGINS_DIR"))
-        }
-    }
-}
-
-tasks.register("buildAndCopy") {
-    dependsOn("jar")
-    dependsOn("copyJarToPlugins")
-    tasks.findByName("copyJarToPlugins")?.mustRunAfter("jar")
 }
