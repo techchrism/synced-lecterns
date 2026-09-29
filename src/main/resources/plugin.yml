@@ -2,6 +2,6 @@ name: SyncedLecterns
 version: ${version}
 main: me.techchrism.syncedlecterns.SyncedLecterns
 author: Techdoodle
-api-version: 1.21
+api-version: 26.2
 libraries:
   - org.jetbrains.kotlin:kotlin-stdlib:2.4.10
